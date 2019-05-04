@@ -13,8 +13,9 @@
     "example:universal": "browserify --debug example/universal/browser.js -o example/universal/bundle.js -t babelify && babel-node example/universal/server.js",
     "format": "jsfmt -w *.js src/ test/",
     "lint": "eslint *.js src/ test/",
-    "prepublish": "npm run build",
-    "test": "karma start"
+    "prepublish": "npm run snyk-protect; npm run build",
+    "test": "karma start",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "react",
@@ -31,7 +32,8 @@
     "a11y-focus-scope": "^1.1.0",
     "a11y-focus-store": "^1.0.0",
     "exenv": "^1.2.0",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "babel-cli": "^6.1.1",
@@ -42,27 +44,27 @@
     "babel-preset-stage-1": "^6.1.2",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "browserify-istanbul": "^0.2.1",
+    "browserify-istanbul": "^2.0.0",
     "chai": "^3.4.1",
     "defined": "^1.0.0",
-    "eslint": "^1.8.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-cflint": "^1.0.0",
     "express": "^4.13.3",
     "isparta": "^4.0.0",
     "jsfmt": "^0.5.2",
-    "karma": "^0.13.15",
+    "karma": "^2.0.3",
     "karma-beep-reporter": "^0.1.4",
-    "karma-browserify": "^4.4.0",
+    "karma-browserify": "^5.3.0",
     "karma-chrome-launcher": "^0.2.1",
     "karma-coverage": "^0.5.3",
     "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.1.1",
     "karma-safari-launcher": "^0.1.1",
-    "karma-sauce-launcher": "^0.3.0",
+    "karma-sauce-launcher": "^1.2.0",
     "karma-tape-reporter": "^1.0.3",
     "minimist": "^1.2.0",
-    "mocha": "^2.3.3",
+    "mocha": "^4.0.0",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
@@ -70,5 +72,6 @@
     "react-gateway": "^2.2.0",
     "react-redux": "^4.0.0",
     "redux": "^3.0.4"
-  }
+  },
+  "snyk": true
 }
