@@ -62,7 +62,7 @@
     "karma-sauce-launcher": "^0.3.0",
     "karma-tape-reporter": "^1.0.3",
     "minimist": "^1.2.0",
-    "mocha": "^2.3.3",
+    "mocha": "^6.0.0",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
